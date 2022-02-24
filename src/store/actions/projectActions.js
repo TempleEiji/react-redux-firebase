@@ -1,3 +1,5 @@
+import dayjs from 'dayjs'
+
 export const createProject = (project) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         // make async call to database
@@ -9,7 +11,7 @@ export const createProject = (project) => {
             authorFirstName: profile.firstName,
             authorLastName: profile.lastName,
             authorId: authorId,
-            createdAt: new Date()
+            createdAt: dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss')
         }).then(() => {
             dispatch({ type: 'CREATE_PROJECT', project})
         }).catch((err) => {

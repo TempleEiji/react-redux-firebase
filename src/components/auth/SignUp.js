@@ -26,25 +26,25 @@ class SignUp extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Sign Up</h5>
+                    <h5 className="grey-text text-darken-3">新規会員登録</h5>
                     <div className="input-field">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email">メールアドレス</label>
                         <input type="email" id="email" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">パスワード</label>
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <label htmlFor="firstName">First Name</label>
-                        <input type="text" id="firstName" onChange={this.handleChange}/>
-                    </div>
-                    <div className="input-field">
-                        <label htmlFor="lastName">Last Name</label>
+                        <label htmlFor="lastName">姓</label>
                         <input type="text" id="lastName" onChange={this.handleChange}/>
                     </div>
                     <div className="input-field">
-                        <button className="btn pink lighten-1 z-depth-0">Sign up</button>
+                        <label htmlFor="firstName">名</label>
+                        <input type="text" id="firstName" onChange={this.handleChange}/>
+                    </div>
+                    <div className="input-field">
+                        <button className="btn pink lighten-1 z-depth-0">登録</button>
                         <div className="red-text center">
                             { authError ? <p>{authError}</p> : null }
                         </div>

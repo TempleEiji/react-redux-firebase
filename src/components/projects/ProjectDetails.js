@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
-import moment from 'moment'
+import dayjs from 'dayjs'
 
 const ProjectDetails = (props) => {
     const { project, auth } = props;
@@ -18,7 +18,7 @@ const ProjectDetails = (props) => {
                     </div>
                     <div className="card-action gret lighten-4 grey-text">
                         <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
-                        <div>{moment(project.createdAt.toDate()).calendar()}</div>
+                        <div>{dayjs(project.createdAt).format('YYYY-MM-DD HH:mm:ss')}</div>
                     </div>
                 </div>
             </div>

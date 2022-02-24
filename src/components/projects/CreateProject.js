@@ -25,17 +25,17 @@ class CreateProject extends Component {
         return (
             <div className="container">
                 <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Create new project</h5>
+                    <h5 className="grey-text text-darken-3">新規投稿</h5>
                     <div className="input-field">
-                        <label htmlFor="title">Title</label>
+                        <label htmlFor="title">タイトル</label>
                         <input type="text" id="title" onChange={this.handleChange} />
                     </div>
                     <div className="input-field">
-                        <label htmlFor="content">Project Content</label>
+                        <label htmlFor="content">コンテンツ</label>
                         <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
-                        <button className="btn pink lighten-1 z-depth-0">Create</button>
+                        <button className="btn lighten-2 lighten-1 z-depth-0">投稿</button>
                     </div>
                 </form>
             </div>

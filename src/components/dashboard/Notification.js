@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment'
+import dayjs from 'dayjs'
 
 const Notification = (props) => {
     const { notifications } = props;
@@ -15,7 +15,7 @@ const Notification = (props) => {
                                     <span className="pink-text">{item.user} </span>
                                     <span>{item.content}</span>
                                     <div className="grey-text note-date">
-                                        {moment(item.time.toDate()).fromNow()}
+                                       {dayjs(item.time).format('YYYY-MM-DD')}
                                     </div>
                                 </li>
                             )
